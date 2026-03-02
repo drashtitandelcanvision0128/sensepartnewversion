@@ -11,14 +11,20 @@ nav ul {
   list-style-type: none;
   padding: 1rem;
 }
-/* nav ul li {
-    padding-left: 35px;
-    } */
-    nav ul li {
-    color: var(--text-color);
+nav ul li {
+  color: var(--text-color);
   position: relative;
   cursor: pointer;
   padding: 5px 35px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: inherit; /* inherits li color */
+}
+
+nav ul li:hover a {
+  color: var(--accent-color);
 }
 
 nav ul li::after {
@@ -41,3 +47,5 @@ nav ul li:hover::after {
 .auth button{
     cursor: pointer;
 }
+
+

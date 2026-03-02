@@ -1,9 +1,15 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 import "./header.css";
 
 const Header = () => {
-  const navItems = ["Home", "About", "Services", "Blog", "Contact"];
+  const navItems = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Services", path: "/services" },
+    { name: "Blog", path: "/blogs" },
+    { name: "Contact", path: "/contact" },
+  ];
 
   return (
     <header>
@@ -13,7 +19,9 @@ const Header = () => {
         <nav>
           <ul>
             {navItems.map((item, index) => (
-              <li key={index}>{item}</li>
+              <li key={index}>
+                <Link to={item.path}>{item.name}</Link>
+              </li>
             ))}
           </ul>
         </nav>
