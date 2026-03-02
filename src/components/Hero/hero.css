@@ -1,0 +1,85 @@
+.hero {
+    height: 85vh;
+
+  background:
+    linear-gradient(
+       rgba(1, 1, 1, 0),
+      rgba(1, 1, 1, 0.8)
+    ),
+    url("/src/assets/premium_banner_image.avif");
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.hero-content {
+  position: relative;
+  color: white;
+  max-width: 800px;
+  padding: 20px;
+  animation: fadeUp 1.2s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.hero-title {
+font-family: 'Bebas Neue';
+  letter-spacing: 34px;
+
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  text-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.6),
+    0 0 40px rgba(20, 184, 166, 0.3);
+
+  animation: fadeUp 1.2s ease forwards;
+}
+
+.hero-desc {
+  margin-top: 20px;
+  font-size: 1.1rem;
+   /* opacity: 0.1; */
+    font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  /* letter-spacing: 1px; */
+  letter-spacing: 0.5px;
+
+  animation: fadeUp 1.5s ease forwards;
+}
+
+.hero-btn {
+  margin-top: 30px;
+  padding: 14px 32px;
+  background-color: #B87333;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  box-shadow: 0 0 18px rgba(184, 115, 51, 0.5);
+}
+
+.hero-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
